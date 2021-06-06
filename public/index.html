@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Firestore Basics Practise</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+</head>
+
+<body>
+  <div class="container border mt-5">
+    <h1 class="mt-2">Firebase Basics(Authentication,Firestore) etc</h1>
+    <section id="whenSignedOut">
+      <button id="signedInBtn" class="btn btn-primary mt-2 mb-2">Sign in With Google</button>
+    </section>
+
+
+    <section id="whenSignedIn">
+      <div id="userDetails"></div>
+      <button id="signOutBtn" class="btn btn-danger">Sign Out</button>
+    </section>
+
+    <br />
+
+    <section>
+      <div>
+        <h3>Add Data</h3>
+        <input type="text" class="form-control mb-2" placeholder="Enter the name" id="name">
+      
+        <button id="createThing" class="btn btn-secondary mb-2">Create Random Thing</button>
+      </div>
+
+
+
+      <ol class="text-dark" style="font-size: 20px;" id="thingsList">
+
+      </ol>
+
+
+
+
+
+    </section>
+
+  </div>
+</body>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-database.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-firestore.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-auth.js"></script>
+
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+ https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyDjshvgmKPoJ_DjJcmlbFUDFQo7ocgZwzU",
+    authDomain: "chatonlinesafely.firebaseapp.com",
+    projectId: "chatonlinesafely",
+    storageBucket: "chatonlinesafely.appspot.com",
+    messagingSenderId: "462564911321",
+    appId: "1:462564911321:web:93216d2bb8501c537bf6c8",
+    measurementId: "G-GYJ7KZHHQQ"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+<!-- Optional JavaScript; choose one of the two! -->
+
+<!-- Option 1: Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+<script src="app.js" defer></script>
+
+</html>
